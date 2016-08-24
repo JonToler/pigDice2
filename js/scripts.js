@@ -19,14 +19,25 @@ function playerTurn() {
   nextPlayer();
 } else {
   pigDice.turnScore += dieRoll;
-}
-console.log(pigDice.turnScore);
-return dieRoll;
-}
+  if (pigDice.currentPlayer === 1) {
+    if (pigDice.turnScore + pigDice.player1 >= 100) {
+       alert("Player 1 wins!");
+     }
+   } else if (pigDice.turnScore + pigDice.player2 >= 100) {
+      alert("Player 2 wins!");
+   }
+ }
+    return dieRoll;
+  }
 
 function holdButton() {
-  pigDice.currentPlayer += pigDice.turnScore;
-
+  var playerUp = pigDice.currentPlayer;
+  if (playerUp === 1) {
+    pigDice.player1 += pigDice.turnScore;
+  } else {
+    pigDice.player2 += pigDice.turnScore;
+  }
+  pigDice.turnScore = 0;
   nextPlayer();
 }
 
@@ -38,3 +49,21 @@ function nextPlayer() {
   }
 }
 //UI logic
+$(document).ready(function(){
+$("#roll").click(function(){
+  output = playerTurn();
+  $("#CurrRollResults").text(output);
+  $("#CurrRollScore").text(pigDice.turnScore);
+  });
+
+$("#hold").click(function(){
+holdScore = holdButton();
+
+$("#totalPlayer1").text(pigDice.player1);
+
+$("#totalPlayer2").text(pigDice.player2);
+
+
+});
+});
+//eventPrevent(default);
