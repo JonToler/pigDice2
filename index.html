@@ -10,35 +10,32 @@
 </head>
 <body>
   <div class="container">
-
     <div class="form-group">
+      <form id ="PigDice">
+        <label for = "player1Name">player 1 please enter your name!: </label>
+        <input type="text" class = "form-control" id ="player1">
+        <br>
+        <label for = "player2Name">player 2 please enter your name!: </label>
+        <input type="text" class = "form-control" id ="player2">
+        <br>
+        <button type="submit" class="btn">Add player's names.</button>
 
-
-    <form id ="PigDice">
-      <label for = "player1Name">player 1 please enter your name!: </label>
-      <input type="text" class = "form-control" id ="player1">
-      <br>
-      <label for = "player2Name">player 2 please enter your name!: </label>
-      <input type="text" class = "form-control" id ="player2">
-      <br>
-      <button type="submit" class="btn">Add player's names.</button>
-
-    </form>
+      </form>
     </div>
 
     <h2>Roll results:</h2>
-    <p id = "CurrRollResults"></p>
+    <p><span class="gameStatusDisplay" id="CurrRollResults">0</span></p>
     <h2>Current roll score:</h2>
-    <p id = "CurrRollScore"></p>
+    <p><span class="gameStatusDisplay" id="CurrRollScore">0</span></p>
     <br>
     <button id = "roll" type="submit" class="btn">roll.</button>
     <button id = "hold" type="submit" class="btn">hold.</button>
     <br>
     <h3>The score for player 1:</h3>
-    <p id = "totalPlayer1"></p>
+    <p><span class="gameStatusDisplay" id="totalPlayer1">0</span></p>
     <br>
     <h3>The score for player 2:</h3>
-    <p id = "totalPlayer2"></p>
+    <p><span class="gameStatusDisplay" id="totalPlayer2">0</span></p>
   </div>
 </body>
 </html>
