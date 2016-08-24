@@ -1,0 +1,22 @@
+body {
+  background-color: #ff99cf;
+}
+img {
+  display: block;
+  margin-left: 315px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 40pt;
+}
+
+.jumbotron {
+  background-color: #ff4dac;
+  color: white;
+}
+
+.btn {
+  background-color: #ff4dac;
+  color: white;
+}
