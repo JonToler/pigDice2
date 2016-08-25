@@ -65,11 +65,20 @@ function alertWinner(pigFace) {
 }
 
 $(document).ready(function() {
+
 $("#roll").click(function() {
   output = playerTurn();
   $("#CurrRollResults").text(output);
   $("#CurrRollScore").text(pigDice.turnScore);
   });
+
+$("#PigDice").submit(function(event){
+  event.preventDefault();
+var player1Input= $("input#player1Name").val();
+var player2Input= $("input#player2Name").val();
+$(".player1Output").text(player1Input);
+$(".player2Output").text(player2Input);
+});
 
   $("#hold").click(function() {
     holdScore = holdButton();

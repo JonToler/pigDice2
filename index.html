@@ -16,12 +16,12 @@
         <img src= "image/porkys.gif">
         <br>
         <label for = "player1Name">player 1 please enter your name!: </label>
-        <input type="text" class = "form-control" id ="player1">
+        <input type="text" class = "form-control" id ="player1Name">
         <br>
         <label for = "player2Name">player 2 please enter your name!: </label>
-        <input type="text" class = "form-control" id ="player2">
+        <input type="text" class = "form-control" id ="player2Name">
         <br>
-        <button type="submit" class="btn">Add player's names.</button>
+        <button id = "nameSubmit" type="submit" class="btn">Add player's names.</button>
 
       </form>
     </div>
@@ -34,10 +34,10 @@
     <button id = "roll" type="submit" class="btn">roll.</button>
     <button id = "hold" type="submit" class="btn">hold.</button>
     <br>
-    <h3>The score for player 1:</h3>
+    <h3>Player 1:<span class ="player1Output"></span> the pig roller's score is:</h3>
     <p><span class="gameStatusDisplay" id="totalPlayer1">0</span></p>
     <br>
-    <h3>The score for player 2:</h3>
+    <h3>Player 2:<span class="player2Output"></span> the pig roller's score is:</h3>
     <p><span class="gameStatusDisplay" id="totalPlayer2">0</span></p>
   </div>
 </body>
