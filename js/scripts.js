@@ -44,8 +44,10 @@ function holdButton() {
 function nextPlayer() {
   if (pigDice.currentPlayer === 1) {
     pigDice.currentPlayer = 2;
+    alert("Player 2, your turn!!");
   } else {
     pigDice.currentPlayer = 1;
+    alert("Player 1, your turn!!");
   }
 }
 
@@ -54,12 +56,18 @@ function resetGame() {
   pigDice.player2 = 0;
   pigDice.currentPlayer = 1;
   pigDice.turnScore = 0;
+
 }
 
 //UI logic
+// function playerUp(pigSnout) {
+//   alert("Player" + pigSnout +
+// }
+
 
 function alertWinner(pigFace) {
   alert("Player" + pigFace + " Wins!");
+  $("#winner").show();
   resetGame();
   $(".gameStatusDisplay").text(0);
 }
@@ -73,6 +81,7 @@ $("#roll").click(function() {
   });
 
 $("#PigDice").submit(function(event){
+  $("#winner").hide();
   event.preventDefault();
 var player1Input= $("input#player1Name").val();
 var player2Input= $("input#player2Name").val();
